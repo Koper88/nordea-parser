@@ -1,0 +1,26 @@
+<div class="row mt-4">
+    <div class="col-md-8">
+        <mat-form-field class="container-fluid">
+            <mat-label>Input text</mat-label>
+            <textarea matInput [(ngModel)]="inputText" placeholder="This is example sentence."
+                cdkTextareaAutosize="true" cdkAutosizeMinRows="6" cdkAutosizeMaxRows="20" spellcheck="false"></textarea>
+        </mat-form-field>
+    </div>
+</div>
+<div class="row  mt-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-offset-4 col-md-2">
+        <button mat-flat-button type="button" color="primary" (click)="getParsedStringXML()">Convert to
+            XML</button>
+    </div>
+    <div class="col-md-2  col-md-offset-2">
+        <button mat-flat-button type="button" color="primary" (click)="getParsedStringCSV()">Convert to CSV</button>
+    </div>
+</div>
+<mat-divider class="col-md-8 mt-4"></mat-divider>
+<div class="row mt-4">
+    <h2>{{outputTextType}}</h2>
+</div>
+<div class="row mt-2">
+    <p style="margin-bottom: 2rem;white-space:pre-wrap;">{{outputText}}</p>
+</div>
